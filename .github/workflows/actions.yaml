@@ -13,4 +13,4 @@ jobs:
           run: ls -lha
 
         - name: Read file
-          run: cat hello-there
+          run: cat READEME.md
