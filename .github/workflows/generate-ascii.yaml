@@ -1,0 +1,18 @@
+name: Generate ASCII Artwork
+
+on: push
+
+jobs:
+
+    numero_uno:
+        
+        runs-on: ubuntu-latest
+        steps:
+
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: ASCII Art
+          run: | 
+               sudo apt-get install cowsay -y
+               cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
