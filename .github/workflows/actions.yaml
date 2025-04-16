@@ -1,0 +1,16 @@
+name: Actions Workout
+
+on: push
+
+jobs:
+    numero_uno:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Welcome Message
+          run: echo "Hello There"
+        
+        - name: List files
+          run: ls -lha
+
+        - name: Read file
+          run: cat hello-there
