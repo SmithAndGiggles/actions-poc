@@ -1,0 +1,45 @@
+name: Actions Workout
+
+on: push
+
+jobs:
+
+    build:
+        
+        runs-on: ubuntu-latest
+        steps:
+
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Install cowsay
+          run:  sudo apt-get install cowsay -y
+        
+
+    deploy:
+        
+        needs: build
+
+        runs-on: ubuntu-latest
+        steps:
+
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: ASCII Art Populated
+          run: 
+               cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
+               cat dragon.txt
+
+    test:
+        needs: deploy
+        
+        runs-on: ubuntu-latest
+        steps:
+
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: 
+          run: cat dragon.txt
+
