@@ -14,7 +14,8 @@ jobs:
           run: echo "Hello There"
         
         - name: List files
-          run: ls -lha
+          run: |
+               ls -1a
                ls -1a
 
         - name: Read file
