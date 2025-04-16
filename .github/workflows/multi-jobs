@@ -1,5 +1,4 @@
-name: Actions Workout
-
+name: Multiple Jobs
 on: push
 
 jobs:
@@ -33,7 +32,7 @@ jobs:
 
     test:
         needs: deploy
-        
+
         runs-on: ubuntu-latest
         steps:
 
