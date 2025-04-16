@@ -3,7 +3,9 @@ name: Actions Workout
 on: push
 
 jobs:
+
     numero_uno:
+        
         runs-on: ubuntu-latest
         steps:
 
@@ -22,4 +24,6 @@ jobs:
           run: cat README.md
 
         - name:  ASCII Art
-          run: cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
+          run: | 
+               apt-get install cowsay  
+               cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
