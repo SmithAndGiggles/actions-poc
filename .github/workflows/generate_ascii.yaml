@@ -24,7 +24,7 @@ jobs:
           run: cat dragon.txt
 
         - name: Read file
-          run: grep -i dragon
+          run: grep -i action README.md || true
 
         - name: See ASCII Art
           run: cat dragon.txt
