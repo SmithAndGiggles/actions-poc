@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork
+name: ASCII Artwork
 
 on: push
 
@@ -12,7 +12,19 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
 
-        - name: ASCII Art
-          run: | 
-               sudo apt-get install cowsay -y
-               cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
+        - name: Install cowsay command
+          run: sudo apt-get install cowsay  
+
+        
+        - name: List files
+          run: cowsay -f dragon "Run for cover!!!!!" >> dragon.txt
+
+
+        - name: File Exists?
+          run: cat README.mddragon.txt
+
+        - name: Read file
+          run: grep -i dragon
+
+        - name: See ASCII Art
+          run: cat dragon.txt
